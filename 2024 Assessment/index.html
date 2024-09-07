@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Forecast for South Africa</title>
+
+    <!-- Bootstrap for layout and styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to external CSS file -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Plotly for charting -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">COVID-19 Forecast</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center">COVID-19 Forecast for South Africa</h1>
+
+        <!-- Forecast Table Section -->
+        <div class="table-responsive">
+            <h3>7-Day Forecast Table</h3>
+            <table id="forecast-table" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>New Cases</th>
+                        <th>Total Cases</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- First Plot: Forecasted New Cases (7 Days) -->
+        <div class="plot-container">
+            <h3 class="text-center">7-Day Forecast of New COVID-19 Cases</h3>
+            <div id="forecast-plot"></div>
+        </div>
+
+        <!-- Second Plot: Original and Forecasted New Cases -->
+        <div class="plot-container">
+            <h3 class="text-center">Original & Forecasted New Cases Over Time</h3>
+            <div id="forecast-plot-new-cases"></div>
+        </div>
+
+        <!-- Third Plot: Cumulative Cases Over Time -->
+        <div class="plot-container">
+            <h3 class="text-center">Cumulative COVID-19 Cases Over Time</h3>
+            <div id="forecast-plot-cumulative-cases"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>Powered by Lesiba Ledwaba | COVID-19 Forecast &copy; 2024</p>
+    </footer>
+
+    <!-- External JavaScript file -->
+    <script src="forecast.js"></script>
+</body>
+
+</html>
